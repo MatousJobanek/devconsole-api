@@ -13,9 +13,9 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/redhat-developer/git-service/pkg/apis/devconsole/v1alpha1.GitSource":       schema_pkg_apis_devconsole_v1alpha1_GitSource(ref),
-		"github.com/redhat-developer/git-service/pkg/apis/devconsole/v1alpha1.GitSourceSpec":   schema_pkg_apis_devconsole_v1alpha1_GitSourceSpec(ref),
-		"github.com/redhat-developer/git-service/pkg/apis/devconsole/v1alpha1.GitSourceStatus": schema_pkg_apis_devconsole_v1alpha1_GitSourceStatus(ref),
+		"github.com/redhat-developer/devconsole-api/pkg/apis/devconsole/v1alpha1.GitSource":       schema_pkg_apis_devconsole_v1alpha1_GitSource(ref),
+		"github.com/redhat-developer/devconsole-api/pkg/apis/devconsole/v1alpha1.GitSourceSpec":   schema_pkg_apis_devconsole_v1alpha1_GitSourceSpec(ref),
+		"github.com/redhat-developer/devconsole-api/pkg/apis/devconsole/v1alpha1.GitSourceStatus": schema_pkg_apis_devconsole_v1alpha1_GitSourceStatus(ref),
 	}
 }
 
@@ -46,19 +46,19 @@ func schema_pkg_apis_devconsole_v1alpha1_GitSource(ref common.ReferenceCallback)
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/redhat-developer/git-service/pkg/apis/devconsole/v1alpha1.GitSourceSpec"),
+							Ref: ref("github.com/redhat-developer/devconsole-api/pkg/apis/devconsole/v1alpha1.GitSourceSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/redhat-developer/git-service/pkg/apis/devconsole/v1alpha1.GitSourceStatus"),
+							Ref: ref("github.com/redhat-developer/devconsole-api/pkg/apis/devconsole/v1alpha1.GitSourceStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/redhat-developer/git-service/pkg/apis/devconsole/v1alpha1.GitSourceSpec", "github.com/redhat-developer/git-service/pkg/apis/devconsole/v1alpha1.GitSourceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/redhat-developer/devconsole-api/pkg/apis/devconsole/v1alpha1.GitSourceSpec", "github.com/redhat-developer/devconsole-api/pkg/apis/devconsole/v1alpha1.GitSourceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 

@@ -62,7 +62,7 @@ type GitSourceStatus struct {
 type State string
 
 // Initializing represents a state of GitSource whose creation wasn't completed and is not ready to use
-var Initializing State = "initializing"
+const Initializing State = "initializing"
 
 // Ready represents a state of GitSource whose creation was completed and is ready to use
 var Ready State = "ready"

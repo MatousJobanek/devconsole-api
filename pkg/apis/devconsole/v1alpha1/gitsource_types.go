@@ -65,7 +65,7 @@ type State string
 const Initializing State = "initializing"
 
 // Ready represents a state of GitSource whose creation was completed and is ready to use
-var Ready State = "ready"
+const Ready State = "ready"
 
 // Connection holds information whether the last attempt to reach the git source was successful or not
 type Connection struct {

@@ -83,7 +83,7 @@ type ConnectionState string
 const Failed ConnectionState = "failed"
 
 // OK is the state of Connection when an attempt to reach a GitSource was successful
-var OK ConnectionState = "ok"
+const OK ConnectionState = "ok"
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 

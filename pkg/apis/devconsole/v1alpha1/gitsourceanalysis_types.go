@@ -4,7 +4,6 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
 // GitSourceAnalysisSpec defines the desired state of GitSourceAnalysis
@@ -18,7 +17,7 @@ type GitSourceAnalysisSpec struct {
 
 // GitSourceRef refers to the GitSource to be analyzed
 type GitSourceRef struct {
-	// Name is the name of the GitSource that contains all necessary information of the git repo
+	// Name is the name of the GitSource within the same namespace that contains all necessary information of the git repo
 	Name string `json:"name"`
 }
 
@@ -39,7 +38,7 @@ type GitSourceAnalysisStatus struct {
 
 // BuildEnvStatistics holds information about detected languages and build types in the GitSource
 type BuildEnvStats struct {
-	// SortedLanguages contains sorted languages detected in the GitSource where the first one is with the most use
+	// SortedLanguages contains sorted languages detected in the GitSource where the first one is with the most used
 	SortedLanguages []string `json:"sortedLanguages,omitempty"`
 
 	// DetectedBuildTypes contains list of detected build types in the GitSource

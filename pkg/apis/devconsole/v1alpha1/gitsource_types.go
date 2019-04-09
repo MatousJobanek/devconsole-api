@@ -80,7 +80,7 @@ type Connection struct {
 type ConnectionState string
 
 // Failed is the state of Connection when an attempt to reach a GitSource failed
-var Failed ConnectionState = "failed"
+const Failed ConnectionState = "failed"
 
 // OK is the state of Connection when an attempt to reach a GitSource was successful
 var OK ConnectionState = "ok"
